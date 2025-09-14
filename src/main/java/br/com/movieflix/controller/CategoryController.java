@@ -1,6 +1,5 @@
 package br.com.movieflix.controller;
 
-
 import br.com.movieflix.controller.request.CategoryRequest;
 import br.com.movieflix.controller.response.CategoryResponse;
 import br.com.movieflix.entity.Category;
@@ -46,7 +45,7 @@ public class CategoryController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteByCategoryId(@PathVariable Long id) {
-        categoryService.deleteCategory(id);
+        categoryService.deleteById(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 }
